@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: #30777B;
+}
+
+
+div#principal {
+    margin: auto;
+    width: 1060px;
+    height: 2000px;
+    background-color: whitesmoke;
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 20px;
+}
+
+a.nav-link {
+    background-color: #F5F5F5;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    /* Para quitar el subrayado predeterminado del enlace */
+    display: inline-block;
+    font-size: 16px;
+}
+
+a.nav-link:hover {
+    background-color: #0096db;
+}
+
+/*--------------------------------------------------------------------*/
+
+
+.btnEliminar {
+    margin-left: 25%;
+}
+
+.campos {
+    margin: auto;
+    margin-right: 2%;
+    margin-left: 2%;
+    height: 50%;
+}
+
+.col-md-4 {
+    margin-bottom: 5%;
+}
+
+.col-md-6 {
+    margin-right: 20%;
+}
+
+.btnConfirmar {
+    margin-left: 350px;
+    width: 150px;
+    height: 40px;
+    background-color: #61AF7A;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btnConfirmar:hover {
+    background-color: #60c77f;
+    /* Cambia el color al pasar el cursor */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    /* Agrega una sombra al pasar el cursor */
+}
+
+.btnDuplicar {
+    margin-left: 350px;
+    width: 150px;
+    height: 40px;
+    background-color: #61AF7A;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btnDuplicar:hover {
+    background-color: #60c77f;
+    /* Cambia el color al pasar el cursor */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    /* Agrega una sombra al pasar el cursor */
+}
+
+.btnEliminar {
+    margin-left: 200px;
+    width: 150px;
+    height: 40px;
+    background-color: #61AF7A;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btnDuplicar:hover {
+    background-color: #60c77f;
+    /* Cambia el color al pasar el cursor */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    /* Agrega una sombra al pasar el cursor */
+}
+
+.btnCerrar {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #359989;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btnSiguiente {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #60AF79;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btnCerrar:hover {
+    background-color: #3fb6a2;
+}
+
+.btnSiguiente:hover {
+    background-color: #6bc487;
+}
+
+.btnAbrirCamara {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #60AF79;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btnAbrirCamara:hover {
+    background-color: #6bc487;
+}
+
+/*--------------------------------------------------------------------*/
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+#pac-input {
+    width: 300px;
+    padding: 5px;
+    margin: 10px 0;
+}

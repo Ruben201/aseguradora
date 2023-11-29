@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+</head>
+<body>
+
+    <h1>Página 1</h1>
+
+    <form id="miFormulario">
+        <label for="dato">Ingrese un dato:</label>
+        <input type="text" id="dato" name="dato" required>
+        <button type="button" onclick="enviarDato()">Enviar</button>
+    </form>
+
+    <script>
+        function enviarDato() {
+            // Obtener el valor del campo de entrada
+            var dato = document.getElementById('dato').value;
+
+            // Almacenar el dato en localStorage
+            localStorage.setItem('datoEnviado', dato);
+
+            // Redirigir a la segunda página
+            window.location.href = 'pagina2.html';
+        }
+    </script>
+
+</body>
+</html>

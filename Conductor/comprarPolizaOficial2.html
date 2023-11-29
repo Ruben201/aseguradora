@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprar póliza</title>
+  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" href="/Conductor/comprarPolizaOficial2.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body class="body">
+  <!-- Información -->
+  <div id="principal">
+    <h1>Comprar póliza de seguro</h1>
+    <!-- Menú Superior -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home.html">Home</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Comprar póliza de seguro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Conductor/visualizarPoliza.html">Visualizar pólizas de seguro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Conductor/levantarReporte.html">Levantar reporte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Conductor/verHistorial.html">Ver historial de reportes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Conductor/detallesReporte.html">Ver detalles de un reporte</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br><br>
+    <div class="vistaMarca">
+      <h1 class="lead">Datos ingresados</h1>
+      <div id="infoAuto" class="h6"></div>
+    </div>
+
+    <br><br>
+
+    <div class="demostracion1">
+      <h1 class="display-6">Información de pago</h1>
+
+      
+      <form id="miFormulario">
+        <!--Numero de tarjeta-->
+      <div class="col-md-5">
+        <label for="numero">Número de tarjeta:</label>
+        <input class="form-control" type="text" id="mensaje" maxlength="17" oninput="manejarInput1(this)"  placeholder="Número de tarjeta" required>
+        <div class="checkmark">&#10004;</div>
+      </div>
+
+      <!--Vencimiento-->
+      <div class="col-md-5">
+        <label for="mesAnio">Vencimiento:</label>
+        <input class="form-control" type="month" id="mesAnio" oninput="mostrarPalomita(this)" placeholder="MM/AA" required>
+        <div class="checkmark">&#10004;</div>
+      </div>
+
+      <!--CVV-->
+      <div class="col-md-5">
+        <label for="numero">CVV:</label>
+        <input class="form-control" type="number" id="numero" placeholder="CVV" oninput="manejarInput3(this)" required>
+        <div class="checkmark">&#10004;</div>
+      </div>
+
+      <!--Tipo de tarjeta-->
+      <div class="col-md-5">
+        <label for="tarjeta">Tipo de tarjeta: </label>
+        <select class="form-select" id="tarjeta" oninput="mostrarPalomita(this)" name="tarjeta" required>
+          <option selected disabled value="">Seleccione una opción</option>
+          <option value="Crédito">Crédito</option>
+          <option value="Débito">Débito</option>
+        </select>
+        <div class="checkmark">&#10004;</div>
+      </div>
+
+      <!--Tipo de banco-->
+      <div class="col-md-5">
+        <label for="banco">Tipo de banco: </label>
+        <select class="form-select" id="banco" oninput="mostrarPalomita(this)" name="banco" required>
+          <option selected disabled value="">Seleccione una opción</option>
+          <option value="Crédito">BBVA Bancomer</option>
+          <option value="Banamex">Banamex</option>
+          <option value="Santander México">Santander México</option>
+          <option value="HSBC México">HSBC México</option>
+          <option value="Scotiabank México">Scotiabank México</option>
+          <option value="Inbursa">Inbursa</option>
+          <option value="Banorte">Banorte</option>
+          <option value="Interacciones">Interacciones</option>
+        </select>
+        <div class="checkmark">&#10004;</div>
+      </div>
+      <!--Guardar y regresar-->
+      <div class="col-md-4">
+        <button class="btnRegresar" type="submit" onclick="btnRedireccionar()">Regresar</button>
+        <button class="btnConfirmar"  type="submit">CONFIRMAR PAGO</button>
+        
+      </div>
+    
+
+    </form>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="comprarPolizaOficial2.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

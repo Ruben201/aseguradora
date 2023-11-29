@@ -1,0 +1,62 @@
+.campos{
+    margin: auto;
+    margin-right: 2%;
+    margin-left: 2%;
+    height: 50%;
+}
+.col-md-4{
+    margin-bottom: 5%;
+}
+.btnConfirmar{
+    margin-left: 350px;   
+    width: 150px;
+    height: 40px;
+    background-color: #61AF7A;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.btnConfirmar:hover{
+    background-color: #60c77f; /* Cambia el color al pasar el cursor */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra al pasar el cursor */
+}
+
+.btnCerrar{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #359989;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+.btnSiguiente{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #60AF79;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btnCerrar:hover {
+    background-color: #3fb6a2;
+}
+
+.btnSiguiente:hover {
+    background-color: #6bc487;
+}

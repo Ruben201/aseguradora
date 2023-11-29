@@ -1,0 +1,115 @@
+div#principal{
+    margin: auto;
+    width: 1060px;
+    height: 930px;
+    background-color: whitesmoke;
+}
+
+.vistaMarca{
+    margin-left: 7%;
+    width: 900px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.demostracion1{
+    margin-left: 7%;
+    width: 85%;
+    height: 600px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.lead{
+    text-align: left;
+    font-size: 2rem;
+}
+
+.col-md-5{
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+
+.btn{
+    margin-left: 15%;
+}
+
+.btnConfirmar{
+    margin-left: 270px;   
+    width: 150px;
+    height: 40px;
+    background-color: #61AF7A;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.btnConfirmar:hover{
+    background-color: #60c77f; /* Cambia el color al pasar el cursor */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra al pasar el cursor */
+}
+
+.btnRegresar{
+    margin-left: 50px;   
+    width: 150px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.btnRegresar:hover{
+    background-color: #3A9784; /* Cambia el color al pasar el cursor */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra al pasar el cursor */
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: green;
+    display: none;
+  }
+
+  .Campo {
+    position: relative;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: green;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .form-group {
+    position: relative;
+  }
+
+  .form-select {
+    position: relative;
+  }
+
+  .show-checkmark .checkmark {
+    opacity: 1;
+  }
+
+  .form-control.completed {
+    border-color: green;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+  }
+  .form-select.completed {
+    border-color: green;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+  }

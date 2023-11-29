@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cámara en Vivo y Fotos</title>
+</head>
+<body>
+
+<!-- Botón para habilitar la cámara -->
+<button id="habilitarCamara">Habilitar Cámara</button>
+
+<!-- Contenedor para el video de la cámara -->
+<video id="video" width="640" height="480" style="display:none;"></video>
+
+<!-- Botón para tomar una foto -->
+<button id="tomarFoto" disabled>Tomar Foto</button>
+
+<!-- Contenedor para mostrar las fotos tomadas -->
+<div id="contenedorFotos"></div>
+
+<!-- Script JavaScript -->
+<script>
+  var video = document.getElementById('video');
+  var tomarFotoBtn = document.getElementById('tomarFoto');
+  var contenedorFotos = document.getElementById('contenedorFotos');
+  var fotosTomadas = 0;
+
+  // Agregar un evento al botón para habilitar la cámara
+  document.getElementById('habilitarCamara').addEventListener('click', function() {
+    habilitarCamara();
+  });
+
+  // Función para habilitar la cámara
+  function habilitarCamara() {
+    // Verificar si el navegador es compatible con la API de medios
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      // Solicitar acceso a la cámara
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+          // Mostrar el video en el elemento de video
+          video.srcObject = stream;
+          video.play();
+          // Habilitar el botón para tomar fotos
+          tomarFotoBtn.disabled = false;
+        })
+        .catch(function(error) {
+          console.error('Error al acceder a la cámara:', error);
+        });
+    } else {
+      alert('Tu navegador no es compatible con la API de medios');
+    }
+  }
+
+  // Agregar un evento al botón para tomar una foto
+  tomarFotoBtn.addEventListener('click', function() {
+    tomarFoto();
+  });
+
+  // Función para tomar una foto
+  function tomarFoto() {
+    // Crear un lienzo para capturar la imagen
+    var canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    var context = canvas.getContext('2d');
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    // Crear un elemento de imagen para mostrar la foto
+    var nuevaFoto = document.createElement('img');
+    nuevaFoto.src = canvas.toDataURL('image/png');
+    contenedorFotos.appendChild(nuevaFoto);
+
+    // Incrementar el contador de fotos tomadas
+    fotosTomadas++;
+    
+    // Deshabilitar el botón después de tomar 4 fotos
+    if (fotosTomadas === 4) {
+      tomarFotoBtn.disabled = true;
+    }
+  }
+</script>
+
+</body>
+</html>
